@@ -9,7 +9,7 @@ import PostFormComponentVue from '@/components/PostFormComponent.vue'
   export default {
     data() {
       return {
-        posts: [],
+        
       }
     },
     components: {

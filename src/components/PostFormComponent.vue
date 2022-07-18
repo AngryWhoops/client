@@ -11,11 +11,12 @@
         class="input"
         type="text"
         placeholder="Описание">
-    <button class="btn">Жмякай</button>
+    <button class="btn" @click="createPost">Жмякай</button>
   </form>
 </template>
 
 <script>
+import axios from 'axios';
 
     export default {
     data(){
@@ -27,6 +28,14 @@
     }
   },
   methods: {
+    createPost() {
+      axios
+      .post('http://localhost:8001/api/createcard', this.post)
+      this.post = {
+        title: '',
+        body: ''
+      }
+    }
   }
 }
 </script>
