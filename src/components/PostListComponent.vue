@@ -25,6 +25,7 @@ import axios from 'axios';
                 axios
                 .get('http://localhost:8001/api/getallcards', this.posts)
                 .then(response => this.posts = response.data)
+                .catch(e => console.log("Ошибка GetAllCards"))
             }
         }
 

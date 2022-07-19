@@ -31,6 +31,7 @@ import axios from 'axios';
     createPost() {
       axios
       .post('http://localhost:8001/api/createcard', this.post)
+      .catch(e => console.log("Ошибка CreatePost"))
       this.post = {
         title: '',
         body: ''
