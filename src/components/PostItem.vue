@@ -4,16 +4,7 @@
 
 <script>
     export default {
-        props: {
-            post: {
-              type: Object,
-              required: true
-            }
-
-        },
-        methods: {
-          
-        }
+        //TODO
     }
 </script>
 

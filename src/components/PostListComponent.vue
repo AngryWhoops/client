@@ -1,7 +1,9 @@
 <template>
   <div class="post-item" v-for="post in posts" :key="post.id">
-    <div>Заголовок <strong>{{post.title}}</strong></div>
-    <div>Описание <strong>{{post.body}}</strong></div>
+    <div class="datefield">
+      Создан: {{post.created_at}}
+    </div>
+    <div>{{post.body}}</div>
   </div>
 </template>
 
@@ -23,7 +25,7 @@ import axios from 'axios';
         methods: {
             getAllPosts() {
                 axios
-                .get('http://localhost:8001/api/getallcards', this.posts)
+                .get('http://localhost:8000/api/getallposts', this.posts)
                 .then(response => this.posts = response.data)
                 .catch(e => console.log("Ошибка GetAllCards"))
             }
@@ -46,4 +48,10 @@ import axios from 'axios';
     border-radius: 6px;
     margin: 10px 10px 10px;
   }
+
+  .datefield {
+    font-size: 10px;
+    color: dimgray;
+  }
+
 </style>

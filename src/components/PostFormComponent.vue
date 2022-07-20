@@ -2,16 +2,12 @@
     <form @submit.prevent>
     <h4>Создать</h4>
     <input 
-        v-model="post.title"
-        class="input"
-        type="text"
-        placeholder="Заголовок">
-    <input 
         v-model="post.body"
         class="input"
         type="text"
         placeholder="Описание">
-    <button class="btn" @click="createPost">Жмякай</button>
+    <button class="btn" v-if="post.body.length <= 280" @click="createPost">Жмякай</button>
+    <div v-else>Текст больше 280 элементов</div>
   </form>
 </template>
 
@@ -22,21 +18,20 @@ import axios from 'axios';
     data(){
       return {
         post: {
-        title: '',
         body: '',
-      }
+      },
+      limit: 280,
     }
   },
   methods: {
     createPost() {
       axios
-      .post('http://localhost:8001/api/createcard', this.post)
+      .post('http://localhost:8000/api/createpost', this.post)
       .catch(e => console.log("Ошибка CreatePost"))
       this.post = {
-        title: '',
         body: ''
       }
-    }
+    },
   }
 }
 </script>

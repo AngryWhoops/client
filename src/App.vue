@@ -1,6 +1,8 @@
 <template>
+  <a href="/" class="logomaybe">Bitter</a>
   <nav>
-    <router-link to="/">Лента</router-link> |
+    <router-link to="/">Своя лента</router-link> |
+    <router-link to="/userposts">Посты пользователей</router-link> | 
     <router-link to="/create">Создать пост</router-link>
   </nav>
   <router-view/>
@@ -39,5 +41,13 @@ nav a.router-link-exact-active {
   box-sizing: border-box;
 }
 
+nav {
+  text-align: center;
+}
 
+.logomaybe {
+  text-align: left;
+  padding: 6px 6px 6px 6px;
+  font-size: 32px;
+}
 </style>
