@@ -1,7 +1,7 @@
 <template>
   <div class="post-item" v-for="post in posts" :key="post.id">
     <div class="datefield">
-      Создан: {{post.created_at}}
+      Создан: {{post.created_at}} | Автор: {{post.user_author}}
     </div>
     <div>{{post.body}}</div>
   </div>
@@ -25,7 +25,7 @@ import axios from 'axios';
         methods: {
             getAllPosts() {
                 axios
-                .get('http://localhost:8000/api/getallposts', this.posts)
+                .get('http://localhost:8001/api/getallposts', this.posts)
                 .then(response => this.posts = response.data)
                 .catch(e => console.log("Ошибка GetAllCards"))
             }

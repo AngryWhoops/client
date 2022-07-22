@@ -3,21 +3,14 @@
   <nav>
     <router-link to="/">Своя лента</router-link> |
     <router-link to="/userposts">Посты пользователей</router-link> | 
-    <router-link to="/create">Создать пост</router-link>
+    <router-link to="/create">Создать мой пост</router-link> | 
+    <router-link to="/otheruserpost">Создать пост определённого пользователя</router-link>
   </nav>
   <router-view/>
 </template>
 
 <script>
-
   export default {
-    data() {
-      return {
-      }
-    },
-    methods: {
-
-    }
   }
 </script>
 

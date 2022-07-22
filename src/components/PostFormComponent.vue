@@ -26,8 +26,8 @@ import axios from 'axios';
   methods: {
     createPost() {
       axios
-      .post('http://localhost:8000/api/createpost', this.post)
-      .catch(e => console.log("Ошибка CreatePost"))
+      .post('http://localhost:8001/api/createmypost', this.post)
+      .catch(e => console.log(e.response))
       this.post = {
         body: ''
       }

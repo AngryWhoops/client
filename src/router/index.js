@@ -2,6 +2,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 import FeedView from '../views/FeedView.vue'
 import CreateView from '@/views/CreateView.vue'
 import UserPosts from '@/views/UsersPosts'
+import OtherUsersPostsView from '@/views/OtherUsersPostsView'
 
 const routes = [
   {
@@ -18,6 +19,11 @@ const routes = [
     path: '/userposts',
     name: 'userposts',
     component: UserPosts
+  },
+  {
+    path: '/otheruserpost',
+    name: 'otheruserpost',
+    component: OtherUsersPostsView
   }
 ]
 
