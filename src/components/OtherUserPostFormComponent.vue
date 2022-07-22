@@ -15,12 +15,7 @@
     </form>
 
 
-    <div class="post-item" v-for="post in postsList" >
-    <div class="datefield">
-      Создан: {{post.created_at}} | Автор {{post.user_author}}
-    </div>
-    <div>{{post.body}}</div>
-  </div>
+    
 
 </template>
 
