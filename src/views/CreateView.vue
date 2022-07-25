@@ -1,4 +1,5 @@
 <template>
+<h3>Создать мой пост</h3>
   <div class="create-post">
     <PostFormComponentVue @create="createPost"/>
   </div>

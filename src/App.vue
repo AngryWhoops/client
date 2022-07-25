@@ -3,8 +3,8 @@
   <nav>
     <router-link to="/">Своя лента</router-link> |
     <router-link to="/userposts">Посты пользователей</router-link> | 
-    <router-link to="/create">Создать мой пост</router-link> | 
-    <router-link to="/otheruserpost">Создать пост определённого пользователя</router-link>
+    <router-link to="/hashtagposts">Посты по хэштегам</router-link> | 
+    <router-link to="/create">Создать мой пост</router-link>
   </nav>
   <router-view/>
 </template>

@@ -1,14 +1,14 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import FeedView from '../views/FeedView.vue'
+import MyFeedView from '../views/MyFeedView.vue'
 import CreateView from '@/views/CreateView.vue'
-import UserPosts from '@/views/UsersPosts'
-import OtherUsersPostsView from '@/views/OtherUsersPostsView'
+import UserPosts from '@/views/UserPostsView.vue'
+import HashtagPostsView from '@/views/HashtagPostsView.vue'
 
 const routes = [
   {
     path: '/',
-    name: 'feed',
-    component: FeedView
+    name: 'myfeed',
+    component: MyFeedView
   },
   {
     path: '/create',
@@ -21,9 +21,9 @@ const routes = [
     component: UserPosts
   },
   {
-    path: '/otheruserpost',
-    name: 'otheruserpost',
-    component: OtherUsersPostsView
+    path: '/hashtagposts',
+    name: 'hashtagposts',
+    component: HashtagPostsView,
   }
 ]
 
