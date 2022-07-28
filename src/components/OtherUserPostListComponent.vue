@@ -10,9 +10,10 @@
   </form>
   <div class="post-item" v-for="post in posts" :key="post.id">
     <div class="datefield">
-      Создан: {{post.created_at}} | Автор: {{post.user.login}}
+      Создан: {{post.created_at}} | Автор: {{post.login}}
     </div>
     <div>{{post.body}}</div>
+    <button class="btn" @click="subscribeOnPost(post.id)">Подписаться</button>
   </div>
 </template>
 
@@ -28,13 +29,18 @@ import axios from 'axios';
         },
         methods: {
           userPostsRequest() {
-          axios
-          .get('http://localhost:8001/api/getpostsbyuser/'+this.user_login)
-          .then(response => this.posts = response.data)
-          .catch(e => console.log(e.response))
+            axios
+            .get('http://localhost:8001/api/getpostsbyuser/'+this.user_login)
+            .then(response => this.posts = response.data)
+            .catch(e => console.log(e.response))
 
-          this.user_login = ''
+            this.user_login = ''
 
+          },
+          subscribeOnPost(id) {
+            axios
+            .get('http://localhost:8001/api/subscribe/'+id)
+            .then(e => console.log(e.response))
           }
         }
 
