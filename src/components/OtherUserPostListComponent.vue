@@ -10,7 +10,7 @@
   </form>
   <div class="post-item" v-for="post in posts" :key="post.id">
     <div class="datefield">
-      Создан: {{post.created_at}} | Автор: {{post.login}}
+      Создан: {{post.created_at}} | Автор: {{post.user.login}}
     </div>
     <div>{{post.body}}</div>
     <button class="btn" @click="subscribeOnPost(post.id)">Подписаться</button>
@@ -39,7 +39,7 @@ import axios from 'axios';
           },
           subscribeOnPost(id) {
             axios
-            .get('http://localhost:8001/api/subscribe/'+id)
+            .get('http://localhost:8001/api/subscribeonpost/'+id)
             .then(e => console.log(e.response))
           }
         }
