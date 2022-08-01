@@ -13,7 +13,7 @@
       Создан: {{post.created_at}} | Автор: {{post.user.login}}
     </div>
     <div>{{post.body}}</div>
-    <button class="btn" @click="subscribeOnPost(post.id)">Подписаться</button>
+    <button class="btn" @click="subscribeOnPost(post.user.login)">Подписаться</button>
   </div>
 </template>
 
@@ -37,9 +37,9 @@ import axios from 'axios';
             this.user_login = ''
 
           },
-          subscribeOnPost(id) {
+          subscribeOnPost(login) {
             axios
-            .get('http://localhost:8001/api/subscribeonpost/'+id)
+            .get('http://localhost:8001/api/subscribeonpost/'+login)
             .then(e => console.log(e.response))
           }
         }
