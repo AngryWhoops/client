@@ -1,5 +1,4 @@
 <template>
-    <h3>Список моих постов</h3>
   <div class="post-item" v-for="post in posts" :key="post.id">
     <div class="datefield">
       Создан: {{post.created_at}} | Автор: {{post.user.login}}

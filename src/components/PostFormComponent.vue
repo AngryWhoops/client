@@ -1,6 +1,5 @@
 <template>
     <form @submit.prevent>
-    <h4>Создать</h4>
     <input 
         v-model="post.body"
         class="input"
