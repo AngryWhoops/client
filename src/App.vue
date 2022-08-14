@@ -2,16 +2,16 @@
   <a href="/" class="logomaybe">Bitter</a>
   <nav>
     <router-link to="/">Своя лента</router-link> |
-    <router-link to="/userposts">Посты пользователей</router-link> | 
-    <router-link to="/hashtagposts">Посты по хэштегам</router-link> | 
+    <router-link to="/userposts">Посты пользователей</router-link> |
+    <router-link to="/hashtagposts">Посты по хэштегам</router-link> |
     <router-link to="/create">Создать мой пост</router-link>
   </nav>
-  <router-view/>
+  <router-view />
 </template>
 
 <script>
-  export default {
-  }
+export default {
+}
 </script>
 
 <style>

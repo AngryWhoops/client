@@ -1,6 +1,6 @@
 <template>
     <h3>Список постов по хэштегу</h3>
-    <HashtagPostsList/>
+    <HashtagPostsList />
 </template>
 
 <script>
@@ -18,5 +18,4 @@ export default {
 </script>
 
 <style>
-
 </style>
