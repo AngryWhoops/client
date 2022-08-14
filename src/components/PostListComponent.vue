@@ -25,7 +25,7 @@ export default {
   methods: {
     getAllPosts() {
       axios
-        .get('http://localhost:8001/api/getallmyposts', this.posts)
+        .get('http://localhost:8000/api/getallmyposts', this.posts)
         .then(response => this.posts = response.data)
         .catch(e => console.log("Ошибка GetAllCards"))
     }
