@@ -1,5 +1,5 @@
 <template>
-  <div class="post-item" v-for="post in posts">
+  <div class="post-item" v-for="post in posts" :key="post.id">
     <div class="datefield">
       Создан: {{post.created_at}} | Автор: {{post.user.login}}
     </div>
